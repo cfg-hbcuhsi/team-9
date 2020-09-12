@@ -15,10 +15,12 @@ const courseSchema = new Schema({
           enum:['Monday','Tuesday','Wednesday', 'Thursday', 'Friday','Saturday','Sunday']
         },
   syllabusPath:String,
-  previewImage: String,
+  previewImage:String,
   instructor: {type: Schema.Types.ObjectId, ref: 'User' },
   studentList: [{type:Schema.Types.ObjectId, ref:'User'}],
-
+  title0: String,
+  title1: String,
+  title2: String,
 });
 
 const Course = mongoose.model('Course', courseSchema);
