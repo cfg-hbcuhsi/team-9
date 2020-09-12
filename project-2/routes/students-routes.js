@@ -8,7 +8,10 @@ const bcrypt = require('bcryptjs');
 // router.get('/students/create',Utils.checkRoles('ADMIN'), (req, res, next) => {
 //   res.render('students-views/student-create')
 // })
+<<<<<<< HEAD
 
+=======
+>>>>>>> a36f9e9c8eaf6732c657e94bcadc0d2e02b441a7
 router.get('/students/create', (req, res, next) => {
   res.render('students-views/student-create')
 })
