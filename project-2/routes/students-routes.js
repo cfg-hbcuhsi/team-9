@@ -5,7 +5,11 @@ const Utils = require('../public/javascripts/utils');
 const uploadCloud = require('../config/cloudinary.js');
 const bcrypt = require('bcryptjs');
 
-router.get('/students/create',Utils.checkRoles('ADMIN'), (req, res, next) => {
+// router.get('/students/create',Utils.checkRoles('ADMIN'), (req, res, next) => {
+//   res.render('students-views/student-create')
+// })
+
+router.get('/students/create', (req, res, next) => {
   res.render('students-views/student-create')
 })
 
