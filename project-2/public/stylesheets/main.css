@@ -73,13 +73,14 @@ header{
 }
 
 .card-body{
-  background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1A1A1A 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+  background: #8680ff;
+  /* background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1A1A1A 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%); */
   background-blend-mode: multiply;
 }
 
 
 .card-body > a, .card > a{
-  color:#aaa;
+  color:#fff;
 }
 
 .card > a :hover{
@@ -337,9 +338,9 @@ header{
 }
 
 #logo-landing{
-  width:400px;
-  margin-left:10vw;
-  margin-top:10vh;
+  width: 70%;
+  margin-left: 8vw;
+  margin-top: 16vh;
 }
 
 .phrase-backdrop{
