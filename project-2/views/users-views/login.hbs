@@ -1,0 +1,28 @@
+
+<form id="login-form" action="/login" method="POST">
+<div class="login-image">
+  <img src="/images/logo-gray.png" alt="spark-logo">
+</div>
+<h1><b>Spark</b></h1>
+<h5>Log in to your account</h5>
+    {{#if errorMessage}}
+    <div>
+        {{errorMessage}}
+    </div>
+    {{/if}}
+    {{#if successMessage}}
+      <div>
+      {{successMessage}}
+      </div>
+    {{/if}}
+  <div class="form-group">
+      <label for="userName">Username </label>
+      <input type="text" class="form-control" name="username" id="username">
+  </div>
+  <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" name="password" id="password">
+  </div>
+
+  <button class="btn">Log in</button>
+</form>

@@ -1,0 +1,39 @@
+<header class='bg-light'>
+  <div class="container">
+    <h1 class="header-text">{{theAssignment.title}}</h1>
+  </div>
+</header>
+{{#if isStudent}}
+<div class="container">
+  <h3>Directions:</h3>
+
+  <p class="lead">{{theAssignment.description}}</p>
+  <form action="/uploads/create" method='post' enctype="multipart/form-data">
+  <input type="hidden" name="assignment" value="{{theAssignment._id}}"id="">
+  <input type="hidden" name="author" value="{{currentUser._id}}"id="">
+  <input type="hidden" name="course" value="{{courseId}}" id="">
+  <div class="form-group">
+      <label for="documentPath">Upload Assignment</label>
+      <input type="file" class="form-control-file" name="documentPath" id="documentPath" required>
+  </div>
+  <button>Submit</button>
+</form>
+{{/if}}
+  <hr>
+  <div class="submission-list">
+      <h2 id="submissions">All Submissions</h2>
+      <hr>
+      {{#if isInstructor}}
+      {{#each uploads}}
+      <p><a href={{this.documentPath}}><i class="fas fa-cloud-upload-alt"></i> {{this.author.name}}  {{this.author.lastName}}</a></p>
+      {{/each}}
+        {{else}} 
+                {{#each uploads}}
+                {{#if this.isAuthor}}
+                <p><a href={{this.documentPath}}><i class="fas fa-cloud-upload-alt"></i> {{this.author.name}}  {{this.author.lastName}}</a></p>
+                {{/if}}
+                {{/each}}
+      {{/if}}
+  </div>
+
+  </div>
