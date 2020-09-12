@@ -99,6 +99,9 @@ router.post('/courses/create',uploadCloud.single('syllabus'),(req, res, next) =>
     previewImage: '/images/preview-0.jpg',
     instructor: req.body.instructor,
     studentList: req.body.studentList,
+    title0: req.body.title0,
+    title1: req.body.title1,
+    title2: req.body.title2,
   }
 
   Course
@@ -162,6 +165,9 @@ router.post('/courses/create',uploadCloud.single('syllabus'),(req, res, next) =>
       previewImage: '/images/preview-0.jpg',
       instructor: req.body.instructor,
       studentList: req.body.studentList,
+      title0: req.body.title0,
+      title1: req.body.title1,
+      title2: req.body.title2,
     }
     Course
           .findByIdAndUpdate(req.body.id,updatedCourse )
