@@ -1,36 +1,43 @@
 <link rel="stylesheet" href="/stylesheets/course-details.css">
 
 
-  <header class="bg-light">
-    <div class="container">
-      <h1 class=" header-text">{{course.name}}</h1>
-    </div>
-  </header>
+
+<header class="bg-light">
+  <div class="container">
+    <h1 class=" header-text">{{course.code}}</h1>
+    <p style="font-size: 20px"><a href="localhost:3000/profile" target="_blank"> Back</a></p>
+
+  </div>
+</header>
 
 
-<div class="content-wrapper">
-  <div class="circular-container"> 
-    <a  id="clock" href="/course/details/{{course._id}}/page/0"><i class="far fa-clock"></i></a>
-  </div>
-  <div class="circular-container">
-    <a id="door"href="/course/details/{{course._id}}/page/1"><i class="fas fa-door-open"></i></a>
-  </div>
-
-  <div class="circular-container">
-    <a id="gavel"href="/course/details/{{course._id}}/page/2"><i class="fas fa-gavel"></i></a>
-  </div>
-  <div class="circular-container">
-    <a id="map" href="/course/details/{{course._id}}/page/3"><i class="fas fa-sitemap"></i></a>
-    
-  </div>
-  <div class="circular-container">
-    <a id="task"href="/course/details/{{course._id}}/page/4"><i class="fas fa-tasks"></i></a>
-  </div>
-  <div class="circular-container">
-    <a id="file" href="/course/details/{{course._id}}/page/5"><i class="far fa-file"></i></a>
-  </div>
-  <div class="circular-container">
-    <a id="video" href="/course/details/{{course._id}}/page/6"><i class="fas fa-video"></i></a>
-  </div>
+<div class="col-md-12 text-center sm-text-center sm-mb-90">
+  <h3 style="font-size: 35px">Description</h3>
+  <div class="divider divider-left divider-dark"></div>
+  <p style="font-size: 25px">{{course.introduction}}</p>
 </div>
-
+<br>
+<div class="col-md-12 text-center sm-text-center sm-mb-90">
+  <h3 style="font-size: 35px">Related Majors</h3>
+  <div class="divider divider-left divider-dark"></div>
+  <p style="font-size: 25px">{{course.startDate}}</p>
+</div>
+<br>
+<div class="col-md-12 text-center sm-text-center sm-mb-90">
+  <h3 style="font-size: 35px">Annual Salary</h3>
+  <div class="divider divider-left divider-dark"></div>
+  <p style="font-size: 25px">{{course.endDate}}</p>
+</div>
+<br>
+<div class="col-md-12 text-center sm-text-center sm-mb-90">
+  <h3 style="font-size: 35px">Learning Resources</h3>
+  <div class="divider divider-left divider-dark"></div>
+  <p style="font-size: 25px"> <a href="{{course.title0}}" target="_blank">{{course.startTime}}</a></p>
+  <p style="font-size: 25px"> <a href="{{course.title1}}" target="_blank">{{course.endTime}}</a></p>
+  <p style="font-size: 25px"> <a href="{{course.title2}}" target="_blank">{{course.days}}</a></p>
+</div>
+<script>
+  function RedirectUrl() {
+    window.location.href = "localhost:3000/profile";
+  }
+  <script>
